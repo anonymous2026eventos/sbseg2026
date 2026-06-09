@@ -50,3 +50,5 @@ The experiments were conducted using the following public datasets:
 Due to licensing and distribution restrictions, the original datasets are not redistributed in this repository and should be obtained from their respective official sources.
 
 To support reproducibility and facilitate IDS generalization research, this repository provides the processed versions of these datasets. The datasets were generated from the original network traffic captures and standardized using the NFStream tool, resulting in a common feature space that enables cross-dataset generalization experiments and comparative evaluations.
+
+The features extracted by NFStream were organized according to the categories originally defined by the framework, as presented in Table "Features Extracted with NFStream from the PCAP Files of the Datasets". These categories group features that describe different characteristics of network flows, including basic identification and traffic volume information (Core Features), statistical metrics derived from packets observed throughout the flow (Post-Mortem Statistics), and application identification features (Ground Truth).
