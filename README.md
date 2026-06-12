@@ -61,32 +61,32 @@ The experiments were conducted by integrating network flows from the source data
 
 Flow integration was evaluated using different integration rates (20%, 40%, 60%, and 80%) and three integration strategies:
 
-**Benign Flow Integration:** Only benign flows were integrated.
-**(D)DoS Flow Integration:** Only malicious flows of the (D)DoS class were integrated, across DoS and DDoS types.
-**Mixed Flow Integration:** Both benign and (D)DoS flows were integrated.
+* **Benign Flow Integration:** Only benign flows were integrated.
+* **(D)DoS Flow Integration:** Only malicious flows of the (D)DoS class were integrated, across DoS and DDoS types.
+* **Mixed Flow Integration:** Both benign and (D)DoS flows were integrated.
 
 The following notebooks are available:
 
 **Baseline Flow Integration**
 
-**Notebook 1:** Integration of benign flows.
-**Notebook 2:** Integration of malicious (D)DoS flows.
-**Notebook 3:** Integration of both benign and malicious (D)DoS flows.
+* [Notebook 1]: Integration of benign flows.
+* [Notebook 2]: Integration of malicious (D)DoS flows.
+* [Notebook 3]: Integration of both benign and malicious (D)DoS flows.
 
 **Flow Integration with PCA**
 
 Principal Component Analysis (PCA) is applied before the flow integration process.
 
-**Notebook 4:** PCA + benign flow integration.
-**Notebook 5:** PCA + malicious (D)DoS flow integration.
-**Notebook 6:** PCA + mixed flow integration.
+* [Notebook 4]: PCA + benign flow integration.
+* [Notebook 5]: PCA + malicious (D)DoS flow integration.
+* [Notebook 6]: PCA + mixed flow integration.
 
 **Flow Integration with Chi-Square Feature Selection**
 
 Chi-Square feature selection is applied before the flow integration process.
 
-**Notebook 7:** Chi-Square + benign flow integration.
-**Notebook 8:** Chi-Square + malicious (D)DoS flow integration.
-**Notebook 9:** Chi-Square + mixed flow integration.
+* [Notebook 7]: Chi-Square + benign flow integration.
+* [Notebook 8]: Chi-Square + malicious (D)DoS flow integration.
+* [Notebook 9]: Chi-Square + mixed flow integration.
 
 These notebooks support the experiments reported in the paper and enable reproduction of the proposed flow integration methodology across different preprocessing and feature-engineering scenarios.
