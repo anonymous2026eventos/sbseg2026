@@ -10,8 +10,8 @@ This repository contains the supplementary materials, datasets, source code, and
 
 ## Authors
 
-* Kelson Carvalho Santos
-* Rodrigo Sanches Miani
+* author1
+* author2
 
 ---
 
