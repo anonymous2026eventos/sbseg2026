@@ -24,20 +24,22 @@ The growth of cyber threats and the evolution of attacks highlight the need for 
 ```text
 .
 ├── datasets/
-│   ├── unsw-nb15/
-│   ├── cic-ids2017/
-│   └── cic-ids2018/
-│
-├── results/
-│   ├── figures/
-│   ├── tables/
-│
+│   ├── GenIDS-CIC17/
+│                   └── GenIDS-CIC17.csv
+│                   └── GenIDS-CIC17_description.txt
+│   ├── GenIDS-CIC18/
+│                   └── GenIDS-CIC18.csv
+│                   └── GenIDS-CIC18_description.txt
+│   ├── GenIDS-UNSW15/
+│                   └── GenIDS-UNSW15.csv
+│                   └── GenIDS-UNSW15_description.txt
+├── tables/
+│   └── features.pdf
 ├── notebooks/
 │
 └── README.md
-
-
 ```
+---
 
 ## Datasets
 
@@ -52,3 +54,39 @@ Due to licensing and distribution restrictions, the original datasets are not re
 To support reproducibility and facilitate IDS generalization research, this repository provides the processed versions of these datasets. The datasets were generated from the original network traffic captures and standardized using the NFStream tool, resulting in a common feature space that enables cross-dataset generalization experiments and comparative evaluations.
 
 The features extracted by NFStream were organized according to the categories originally defined by the framework, as presented in Table [Features Extracted with NFStream from the PCAP Files of the Datasets](tables/features.pdf). These categories group features that describe different characteristics of network flows, including basic identification and traffic volume information (Core Features), statistical metrics derived from packets observed throughout the flow (Post-Mortem Statistics), and application identification features (Ground Truth).
+
+## Notebooks (Code)
+
+The experiments were conducted by integrating network flows from the source dataset into the destination dataset before model training. To prevent data leakage, all integrated flows were removed from the source dataset prior to testing. Additionally, an equivalent number of flows were removed from the destination dataset to maintain a consistent dataset size and preserve the original class proportions.
+
+Flow integration was evaluated using different integration rates (20%, 40%, 60%, and 80%) and three integration strategies:
+
+**Benign Flow Integration:** Only benign flows were integrated.
+**(D)DoS Flow Integration:** Only malicious flows of the (D)DoS class were integrated, across DoS and DDoS types.
+**Mixed Flow Integration:** Both benign and (D)DoS flows were integrated.
+
+The following notebooks are available:
+
+**Baseline Flow Integration**
+
+**Notebook 1:** Integration of benign flows.
+**Notebook 2:** Integration of malicious (D)DoS flows.
+**Notebook 3:** Integration of both benign and malicious (D)DoS flows.
+
+**Flow Integration with PCA**
+
+Principal Component Analysis (PCA) is applied before the flow integration process.
+
+**Notebook 4:** PCA + benign flow integration.
+**Notebook 5:** PCA + malicious (D)DoS flow integration.
+**Notebook 6:** PCA + mixed flow integration.
+
+**Flow Integration with Chi-Square Feature Selection**
+
+Chi-Square feature selection is applied before the flow integration process.
+
+**Notebook 7:** Chi-Square + benign flow integration.
+**Notebook 8:** Chi-Square + malicious (D)DoS flow integration.
+**Notebook 9:** Chi-Square + mixed flow integration.
+
+These notebooks support the experiments reported in the paper and enable reproduction of the proposed flow integration methodology across different preprocessing and feature-engineering scenarios.
