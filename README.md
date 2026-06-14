@@ -36,7 +36,15 @@ The growth of cyber threats and the evolution of attacks highlight the need for 
 ├── tables/
 │   └── features.pdf
 ├── notebooks/
-│
+│   └── notebook_1.ipynb
+│   └── notebook_2.ipynb
+│   └── notebook_3.ipynb
+│   └── notebook_4.ipynb
+│   └── notebook_5.ipynb
+│   └── notebook_6.ipynb
+│   └── notebook_7.ipynb
+│   └── notebook_8.ipynb
+│   └── notebook_9.ipynb
 └── README.md
 ```
 ---
@@ -69,24 +77,24 @@ The following notebooks are available:
 
 **Baseline Flow Integration**
 
-* [Notebook 1]: Integration of benign flows.
-* [Notebook 2]: Integration of malicious (D)DoS flows.
-* [Notebook 3]: Integration of both benign and malicious (D)DoS flows.
+* [Notebook 1](notebooks/notebook_1.ipynb): Integration of benign flows.
+* [Notebook 2](notebooks/notebook_2.ipynb): Integration of malicious (D)DoS flows.
+* [Notebook 3](notebooks/notebook_3.ipynb): Integration of both benign and malicious (D)DoS flows.
 
 **Flow Integration with PCA**
 
 Principal Component Analysis (PCA) is applied before the flow integration process.
 
-* [Notebook 4]: PCA + benign flow integration.
-* [Notebook 5]: PCA + malicious (D)DoS flow integration.
-* [Notebook 6]: PCA + mixed flow integration.
+* [Notebook 4](notebooks/notebook_4.ipynb): PCA + benign flow integration.
+* [Notebook 5](notebooks/notebook_5.ipynb): PCA + malicious (D)DoS flow integration.
+* [Notebook 6](notebooks/notebook_6.ipynb): PCA + mixed flow integration.
 
 **Flow Integration with Chi-Square Feature Selection**
 
 Chi-Square feature selection is applied before the flow integration process.
 
-* [Notebook 7]: Chi-Square + benign flow integration.
-* [Notebook 8]: Chi-Square + malicious (D)DoS flow integration.
-* [Notebook 9]: Chi-Square + mixed flow integration.
+* [Notebook 7](notebooks/notebook_7.ipynb): Chi-Square + benign flow integration.
+* [Notebook 8](notebooks/notebook_8.ipynb): Chi-Square + malicious (D)DoS flow integration.
+* [Notebook 9](notebooks/notebook_9.ipynb): Chi-Square + mixed flow integration.
 
 These notebooks support the experiments reported in the paper and enable reproduction of the proposed flow integration methodology across different preprocessing and feature-engineering scenarios.
